@@ -3,3 +3,31 @@ Things to do:
 2. Change the program so that if the enemy touches the player, a math releated question appears (most likely using if statements)
 3. Animate the sprits to move
 4. Add the money factor--> answer question incorrectly= lose money 
+  ellipse(200,200,10,10);
+    ellipse(300,100,6,6);
+    ellipse(100,100,7,7);
+    ellipse(200,300,10,10);
+    ellipse(150,78,8,8);
+    ellipse(400,155,9,9);
+    ellipse(10,210,7,7);
+    ellipse(489,327,9,9);
+    ellipse(360,323,10,10);
+    ellipse(378,46,5,5);
+    ellipse(23,70,8,8);
+    ellipse(90,280,5,5);
+    ellipse(120,230,7,7);
+    ellipse(400,270,9,9);
+    ellipse(370,100,9,9);
+    ellipse(500,200,9,9);
+    ellipse(600,209,10,10);
+    ellipse(570,20,7,7);
+    ellipse(550,200,6,6);
+    ellipse(520,150,8,8);
+    ellipse(468,300,9,9);
+    ellipse(70,309,9,9);
+    ellipse(130,40,10,10);
+    ellipse(170,170,9,9);
+    ellipse(80,150,8,8);
+    ellipse(50,260,9,9);
+    ellipse(260,230,9,9);
+    ellipse(270,170,8,8); 
