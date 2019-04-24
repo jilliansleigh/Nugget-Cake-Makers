@@ -14,7 +14,7 @@ function keyPressed(){
     sceneNum++;
   }
 }
-
+//start screen
 function draw() {
   if(sceneNum===0){ 
     background(40);
@@ -64,6 +64,8 @@ function draw() {
     ellipse(30,350,52,25);
     
   }
+  
+  //during the game screen
                          
 else if(sceneNum===1){
   noStroke();
@@ -111,20 +113,24 @@ else if(sceneNum===1){
     ellipse(600,340,45,25);
     ellipse(30,350,52,25);
   translate(-person.pos.x,0);
+  //gravity
   var gravity = createVector(0,0.09);
   person.applyForce(gravity);
   if(mouseIsPressed){
   
-  var force = createVector(-0.1,0);
+  var force = createVector(-0.000000000001,0);
   person.applyForce(force);
   }
   //translate(-person.pos.x,0);
     person.update();
   person.edges();
-    person.display();
+  //monster
+ person.display();
   fill(153,50,204);
-  rect(500, height-39,30,30);
+  rect(450,230,random(90,95),random(80,56));
 }else{
+  
+  //end screen
   background(40);
   noStroke();
   fill(255, 255, 255);
@@ -170,4 +176,4 @@ else if(sceneNum===1){
     ellipse(30,350,52,25);
   text("YOU LOSE!");
 	}
-}
+}  
