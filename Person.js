@@ -14,7 +14,7 @@ function Person() {
   this.display = function() {
     fill(245,130,0);
     noStroke();
-    rect(this.pos.x, this.pos.y+30, this.mass*3, this.mass*7);
+    rect(this.pos.x+90, this.pos.y+30, this.mass*3, this.mass*7);
   }
   this.edges = function() {
     if (this.pos.y > 250) {
