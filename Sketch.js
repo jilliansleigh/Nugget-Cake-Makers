@@ -174,6 +174,7 @@ else if(sceneNum===1){
     ellipse(530,345,50,30);
     ellipse(600,340,45,25);
     ellipse(30,350,52,25);
-  text("YOU LOSE!");
+     fill(255,7,92);
+    text("YOU LOSE!",250,200);
 	}
 }  
