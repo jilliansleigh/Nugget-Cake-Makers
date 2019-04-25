@@ -1,5 +1,12 @@
+// var monster = monster+60;
 var person;
 var sceneNum=0
+var monster = function (x) {
+  fill(50,151,78);
+  rect(400+x,random(240   ,260),random(56,80),90);
+
+};
+
 
 function setup() {
   createCanvas(640, 360);
@@ -51,7 +58,8 @@ function draw() {
     text("PRESS B TO BEGIN",200,200);
     text("USE THE SPACE BAR TO JUMP",250,250);
      fill(70,130,180);
-  	rect(0,315,1000,50);
+  	
+    rect(0,315,1000,50);
     fill(100,149,200);
     ellipse(450,329,30,15);
     ellipse(270,330,41,21); 
@@ -70,7 +78,8 @@ function draw() {
 else if(sceneNum===1){
   noStroke();
   background(51);
-  fill(255, 255, 255);
+  
+  fill(255, 255, 255);//stars
     ellipse(200,200,10,10);
     ellipse(300,100,6,6);
     ellipse(100,100,7,7);
@@ -99,10 +108,11 @@ else if(sceneNum===1){
     ellipse(50,260,9,9);
     ellipse(260,230,9,9);
     ellipse(270,170,8,8);
-    ellipse(60,350,52,25);
-  fill(70,130,180);
+    ellipse(60,350,52,25);//end of stars
+  
+  fill(70,130,200);//ground
     rect(0,315,1000,50);
-    fill(100,149,200);
+    fill(100,14,200);
     ellipse(450,329,30,15);
     ellipse(270,330,41,21); 
     ellipse(70,329,40,20);
@@ -111,7 +121,7 @@ else if(sceneNum===1){
     ellipse(270,330,41,21); 
     ellipse(530,345,50,30);
     ellipse(600,340,45,25);
-    ellipse(30,350,52,25);
+    ellipse(30,350,52,25);//end of ground
   translate(-person.pos.x,0);
   //gravity
   var gravity = createVector(0,0.09);
@@ -125,9 +135,24 @@ else if(sceneNum===1){
     person.update();
   person.edges();
   //monster
- person.display();
+ 
+  person.display();
   fill(153,50,204);
-  rect(450,230,random(90,95),random(80,56));
+  monster(100);
+  monster(500);
+  monster(1000);
+  monster(1500);
+  monster(2000);
+  monster(2500);
+  monster(3000);
+  monster(3500);
+  monster(4000);
+  monster(4500);
+  
+  
+  
+  
+  
 }else{
   
   //end screen
@@ -163,7 +188,8 @@ else if(sceneNum===1){
     ellipse(260,230,9,9);
     ellipse(270,170,8,8);
     fill(70,130,180);
-    rect(0,315,1000,50);
+    
+  rect(0,315,1000,50);
     fill(100,149,200);
     ellipse(450,329,30,15);
     ellipse(270,330,41,21); 
