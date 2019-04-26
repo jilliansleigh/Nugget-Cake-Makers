@@ -12,6 +12,16 @@ function setup() {
   createCanvas(640, 360);
   person = new Person();
 }
+/* walk??
+function walk(){
+  if (key == ' '){
+    var walk = createVector(10,0);
+  person.applyForce(walk);
+  }else if (key=='d'){ 
+    sceneNum++;
+  }
+}
+*/
 
 function keyPressed(){
   if (key == ' '){
@@ -44,7 +54,7 @@ function draw() {
     ellipse(400,270,9,9);
     ellipse(370,100,9,9);
     ellipse(500,200,9,9);
-    ellipse(600,209,10,10);
+    ellipse(600,209,10,10); 
     ellipse(570,20,7,7);
     ellipse(550,200,6,6);
     ellipse(520,150,8,8);
@@ -124,7 +134,7 @@ else if(sceneNum===1){
     ellipse(30,350,52,25);//end of ground
   translate(-person.pos.x,0);
   //gravity
-  var gravity = createVector(0,0.09);
+  var gravity = createVector(0,0.122);
   person.applyForce(gravity);
   if(mouseIsPressed){
   
@@ -144,7 +154,7 @@ else if(sceneNum===1){
   monster(1500);
   monster(2000);
   monster(2500);
-  monster(3000);
+  monster(3000); 
   monster(3500);
   monster(4000);
   monster(4500);
@@ -203,4 +213,4 @@ else if(sceneNum===1){
      fill(255,7,92);
     text("YOU LOSE!",250,200);
 	}
-}  
+}
