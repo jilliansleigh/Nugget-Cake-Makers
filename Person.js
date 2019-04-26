@@ -14,7 +14,17 @@ function Person() {
   this.display = function() {
     fill(245,130,0);
     noStroke();
-    rect(this.pos.x+90, this.pos.y+30, this.mass*3, this.mass*7);
+    //left anntena
+    rect(this.pos.x+20, this.pos.y-5,this.mass*1, this.mass*1);
+    //right anntena
+     rect(this.pos.x+55, this.pos.y-5,this.mass*1, this.mass*1);
+    //body
+    rect(this.pos.x+30, this.pos.y+10, this.mass*3, this.mass*7);
+    //left eye
+    fill(39,178,309);
+     rect(this.pos.x+47, this.pos.y+25,this.mass*1, this.mass*1);
+    //right eye
+       rect(this.pos.x+32, this.pos.y+25,this.mass*1, this.mass*1);
   }
   this.edges = function() {
     if (this.pos.y > 250) {
