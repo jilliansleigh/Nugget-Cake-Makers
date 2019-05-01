@@ -222,25 +222,25 @@ else if(sceneNum===1){
  
 
 //Work in progress
-var monster;
 var person;
 var sceneNum=0
+var monster = function (x) {
+  fill(50,151,78);  
+  rect(400+x,280,60,60);
+  fill(20,109,20);
+  ellipse(420+x,300,10,10);
+  ellipse(440+x,300,10,10);
+  fill(2,140,10)
+  ellipse(425+x,320,6,16);
+  ellipse(435+x,320,6,16);
+ 
+};
 
 
 function setup() {
   createCanvas(640, 360);
   person = new Person();
 }
-/* walk??
-function walk(){
-  if (key == ' '){
-    var walk = createVector(10,0);
-  person.applyForce(walk);
-  }else if (key=='d'){ 
-    sceneNum++;
-  }
-}
-*/
 
 function keyPressed(){
   if (key == ' '){
@@ -366,11 +366,14 @@ else if(sceneNum===1){
   //monster
  
   person.display();
-  
-   if (person.x > monster.x && person.y < monster.y + monster. width){
+
+  if (person.x > monster.x && person.y < monster.y + monster. width){
    fill(220,50,50);
    rect(200,200,150,50);
    }
+  
+  
+  
   
   
 }else{
@@ -424,3 +427,4 @@ else if(sceneNum===1){
     text("YOU LOSE!",250,200);
 	}
 } 
+ 
