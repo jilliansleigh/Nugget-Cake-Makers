@@ -1,8 +1,13 @@
 Things to do:
 1. Use the coding challenge from a few weeks prior as a base outline --> change it to fit the colour sceem and sprits the group wants 
 2. Change the program so that if the enemy touches the player, a math releated question appears (most likely using if statements)
-3. Animate the sprits to move
-4. Add the money factor--> answer question incorrectly= lose money 
+3. Make stars move
+4. Animate the sprits to move
+5. Add the money factor--> answer question incorrectly= lose money 
+  
+  
+  
+  stars:
   ellipse(200,200,10,10);
     ellipse(300,100,6,6);
     ellipse(100,100,7,7);
