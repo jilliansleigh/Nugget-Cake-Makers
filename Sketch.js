@@ -225,12 +225,12 @@ else if(sceneNum===1){
 var person;
 var sceneNum=0
 var monster = function (x) {
-  fill(50,151,78);  
+  fill(245,130,0);  
   rect(400+x,280,60,60);
-  fill(20,109,20);
+  fill(51, 25, 0);
   ellipse(420+x,300,10,10);
   ellipse(440+x,300,10,10);
-  fill(2,140,10)
+  fill(102,51,0);
   ellipse(425+x,320,6,16);
   ellipse(435+x,320,6,16);
  
@@ -284,8 +284,8 @@ function draw() {
     fill(0,255,127);
     text("THE EQUINOX DELIVERY",100,100);
     fill(255,20,147);
-    text("PRESS B TO BEGIN",200,200);
-    text("USE THE SPACE BAR TO JUMP",250,250);
+    text("PRESS B TO BEGIN",100,150);
+    text("USE THE SPACE BAR TO JUMP",100,200);
      fill(70,130,180);
   	
     rect(0,315,1000,50);
@@ -300,8 +300,49 @@ function draw() {
     ellipse(600,340,45,25);
     ellipse(30,350,52,25);
     
+    fill(50);
+    rect(506,335,50,25);
+     fill(30,0,170);
+    text("Logo", 509,355);
+   fill(80,90,90); 
+    if(mouseIsPressed&&mouseX>506&&mouseY>335){
+      background(40);
+        fill(255,20,147);
+      text("Nugget Cake Makers",190,100);
+      fill(255,355,355);
+    ellipse(200,200,10,10);
+    ellipse(300,100,6,6);
+    ellipse(100,100,7,7);
+    ellipse(200,300,10,10);
+    ellipse(150,78,8,8);
+    ellipse(400,155,9,9);
+    ellipse(10,210,7,7);
+    ellipse(489,327,9,9);
+    ellipse(360,323,10,10);
+    ellipse(378,46,5,5);
+    ellipse(23,70,8,8);
+    ellipse(90,280,5,5);
+    ellipse(120,230,7,7);
+    ellipse(400,270,9,9);
+    ellipse(370,100,9,9);
+    ellipse(500,200,9,9);
+    ellipse(600,209,10,10); 
+    ellipse(570,20,7,7);
+    ellipse(550,200,6,6);
+    ellipse(520,150,8,8);
+    ellipse(468,300,9,9);
+    ellipse(70,309,9,9);
+    ellipse(130,40,10,10);
+    ellipse(170,170,9,9); 
+      
+    
+    }
+
+    
   }
+ 
   
+
   //during the game screen
                          
 else if(sceneNum===1){
@@ -371,11 +412,7 @@ else if(sceneNum===1){
    fill(220,50,50);
    rect(200,200,150,50);
    }
-  
-  
-  
-  
-  
+
 }else{
   
   //end screen-> lose
@@ -427,4 +464,9 @@ else if(sceneNum===1){
     text("YOU LOSE!",250,200);
 	}
 } 
- 
+  
+  
+  
+  
+  
+
