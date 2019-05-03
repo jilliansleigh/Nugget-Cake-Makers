@@ -301,11 +301,11 @@ function draw() {
     ellipse(30,350,52,25);
     
     fill(50);
-    rect(506,335,50,25);
+    rect(589,335,50,25);
      fill(30,0,170);
-    text("Logo", 509,355);
+    text("Logo", 593,355);
    fill(80,90,90); 
-    if(mouseIsPressed&&mouseX>506&&mouseY>335){
+    if(mouseIsPressed&&mouseX>589&&mouseY>335){
       background(40);
         fill(255,20,147);
       text("Nugget Cake Makers",190,100);
@@ -464,9 +464,4 @@ else if(sceneNum===1){
     text("YOU LOSE!",250,200);
 	}
 } 
-  
-  
-  
-  
-  
-
+ 
