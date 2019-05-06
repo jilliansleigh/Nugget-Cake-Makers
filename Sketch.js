@@ -233,9 +233,7 @@ var monster = function (x) {
   fill(102,51,0);
   ellipse(425+x,320,6,16);
   ellipse(435+x,320,6,16);
- 
 };
-
 
 function setup() {
   createCanvas(640, 360);
@@ -309,7 +307,7 @@ function draw() {
       background(40);
         fill(255,20,147);
       text("Nugget Cake Makers",190,100);
-      fill(255,355,355);
+        fill(255,255,255);
     ellipse(200,200,10,10);
     ellipse(300,100,6,6);
     ellipse(100,100,7,7);
@@ -333,16 +331,10 @@ function draw() {
     ellipse(468,300,9,9);
     ellipse(70,309,9,9);
     ellipse(130,40,10,10);
-    ellipse(170,170,9,9); 
-      
-    
+    ellipse(170,170,9,9);       
     }
-
-    
   }
  
-  
-
   //during the game screen
                          
 else if(sceneNum===1){
@@ -391,7 +383,8 @@ else if(sceneNum===1){
     ellipse(270,330,41,21); 
     ellipse(530,345,50,30);
     ellipse(600,340,45,25);
-    ellipse(30,350,52,25);//end of ground
+    ellipse(30,350,52,25);
+  //end of ground
   translate(-person.pos.x,0);
   //gravity
   var gravity = createVector(0,0.122);
@@ -406,12 +399,22 @@ else if(sceneNum===1){
   person.edges();
   //monster
  
-  person.display();
+  
+  var person = new Person(200, 300);
 
-  if (person.x > monster.x && person.y < monster.y + monster. width){
-   fill(220,50,50);
-   rect(200,200,150,50);
-   }
+  var Monster = [];
+for (var i = 0; i < 40; i++) {  
+    Monster.push(new monster(i+ 400, 280));
+}
+
+var NewPerson = new Person(this.pos.x+30, this.pos.y+10);
+
+ for (var i = 0; i < Monster.length; i++) {
+        Monster[i].draw();
+        person.checkForCollision(Monster[i]);
+        Monster[i].x -= 1;
+    }
+   
 
 }else{
   
@@ -464,4 +467,3 @@ else if(sceneNum===1){
     text("YOU LOSE!",250,200);
 	}
 } 
- 
