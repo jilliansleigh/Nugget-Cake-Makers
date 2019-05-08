@@ -467,3 +467,11 @@ var NewPerson = new Person(this.pos.x+30, this.pos.y+10);
     text("YOU LOSE!",250,200);
 	}
 } 
+
+//stars??
+var centerX = floor(random(0,600));
+var centerY = floor(random(0,300));
+
+ellipse(floor(random(0,600)), floor(random(0,300)), StarLength, StarHeight);
+};
+drawStar();
