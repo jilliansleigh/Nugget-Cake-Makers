@@ -7,9 +7,10 @@ Things to do:
 6. Add the money factor--> answer question incorrectly= lose money 
   
   
-  
-  stars:
-  ellipse(200,200,10,10);
+  stars and ground:
+  var drawstar = function draw(){
+     fill(255,255,255);
+    ellipse(200,200,10,10);
     ellipse(300,100,6,6);
     ellipse(100,100,7,7);
     ellipse(200,300,10,10);
@@ -25,15 +26,28 @@ Things to do:
     ellipse(400,270,9,9);
     ellipse(370,100,9,9);
     ellipse(500,200,9,9);
-    ellipse(600,209,10,10);
+    ellipse(600,209,10,10); 
     ellipse(570,20,7,7);
     ellipse(550,200,6,6);
     ellipse(520,150,8,8);
     ellipse(468,300,9,9);
     ellipse(70,309,9,9);
     ellipse(130,40,10,10);
-    ellipse(170,170,9,9);
-    ellipse(80,150,8,8);
-    ellipse(50,260,9,9);
-    ellipse(260,230,9,9);
-    ellipse(270,170,8,8); 
+    ellipse(170,170,9,9); 
+}
+
+var drawground = function draw(){
+  
+  fill(177, 140, 15);//ground
+    rect(0,315,1000,50);
+    fill(149, 120, 15);
+    ellipse(450,329,30,15);
+    ellipse(270,330,41,21); 
+    ellipse(70,329,40,20);
+    ellipse(400,340,51,21); 
+    ellipse(170,339,60,30);
+    ellipse(270,330,41,21); 
+    ellipse(530,345,50,30);
+    ellipse(600,340,45,25);
+    ellipse(30,350,52,25);//end of ground
+}
