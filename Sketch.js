@@ -11,55 +11,13 @@ var monster = function (x) {
   ellipse(418+x,315,5,13);
   ellipse(427+x,315,5,13);
 };
-var drawstar = function draw(){ 
-  fill(255,255,255);
-    ellipse(200,200,10,10);
-    ellipse(300,100,6,6);
-    ellipse(100,100,7,7);
-    ellipse(200,300,10,10);
-    ellipse(150,78,8,8);
-    ellipse(400,155,9,9);
-    ellipse(10,210,7,7);
-    ellipse(489,327,9,9);
-    ellipse(360,323,10,10);
-    ellipse(378,46,5,5);
-    ellipse(23,70,8,8);
-    ellipse(90,280,5,5);
-    ellipse(120,230,7,7);
-    ellipse(400,270,9,9);
-    ellipse(370,100,9,9);
-    ellipse(500,200,9,9);
-    ellipse(600,209,10,10); 
-    ellipse(570,20,7,7);
-    ellipse(550,200,6,6);
-    ellipse(520,150,8,8);
-    ellipse(468,300,9,9);
-    ellipse(70,309,9,9);
-    ellipse(130,40,10,10);
-    ellipse(170,170,9,9); 
-}
 
-var drawground = function draw(){
-  
-  fill(177, 140, 15);//ground
-    rect(0,315,1000,50);
-    fill(149, 120, 15);
-    ellipse(450,329,30,15);
-    ellipse(270,330,41,21); 
-    ellipse(70,329,40,20);
-    ellipse(400,340,51,21); 
-    ellipse(170,339,60,30);
-    ellipse(270,330,41,21); 
-    ellipse(530,345,50,30);
-    ellipse(600,340,45,25);
-    ellipse(30,350,52,25);//end of ground
-}
 
 function setup() {
   createCanvas(640, 360);
   person = new Person();
-  for(var i = 0; i<10000000;i++){
-    monster[i]=new Monster(i*50,300*random(0,2));
+  for(var i = 0; i<10000;i++){
+    monster[i]=new Monster(i*50,300*random(0,1.9));
   }
       
 }
@@ -86,8 +44,44 @@ function draw() {
     text("USE THE SPACE BAR TO JUMP",250,250);
      fill(70,130,180);
   	
-     drawstar();
-     drawgroud();
+        fill(255,255,255);
+    ellipse(200,200,10,10);
+    ellipse(300,100,6,6);
+    ellipse(100,100,7,7);
+    ellipse(200,300,10,10);
+    ellipse(150,78,8,8);
+    ellipse(400,155,9,9);
+    ellipse(10,210,7,7);
+    ellipse(489,327,9,9);
+    ellipse(360,323,10,10);
+    ellipse(378,46,5,5);
+    ellipse(23,70,8,8);
+    ellipse(90,280,5,5);
+    ellipse(120,230,7,7);
+    ellipse(400,270,9,9);
+    ellipse(370,100,9,9);
+    ellipse(500,200,9,9);
+    ellipse(600,209,10,10); 
+    ellipse(570,20,7,7);
+    ellipse(550,200,6,6);
+    ellipse(520,150,8,8);
+    ellipse(468,300,9,9);
+    ellipse(70,309,9,9);
+    ellipse(130,40,10,10);
+    ellipse(170,170,9,9); 
+    
+    fill(177, 140, 15);//ground
+    rect(0,315,1000,50);
+    fill(149, 120, 15);
+    ellipse(450,329,30,15);
+    ellipse(270,330,41,21); 
+    ellipse(70,329,40,20);
+    ellipse(400,340,51,21); 
+    ellipse(170,339,60,30);
+    ellipse(270,330,41,21); 
+    ellipse(530,345,50,30);
+    ellipse(600,340,45,25);
+    ellipse(30,350,52,25);
     
     fill(50);
     rect(589,335,50,25);
@@ -98,7 +92,31 @@ function draw() {
       background(10, 30, 103);
         fill(255,20,147);
       text("Nugget Cake Makers",190,100);
-        drawstar();
+        fill(255,255,255);
+    ellipse(200,200,10,10);
+    ellipse(300,100,6,6);
+    ellipse(100,100,7,7);
+    ellipse(200,300,10,10);
+    ellipse(150,78,8,8);
+    ellipse(400,155,9,9);
+    ellipse(10,210,7,7);
+    ellipse(489,327,9,9);
+    ellipse(360,323,10,10);
+    ellipse(378,46,5,5);
+    ellipse(23,70,8,8);
+    ellipse(90,280,5,5);
+    ellipse(120,230,7,7);
+    ellipse(400,270,9,9);
+    ellipse(370,100,9,9);
+    ellipse(500,200,9,9);
+    ellipse(600,209,10,10); 
+    ellipse(570,20,7,7);
+    ellipse(550,200,6,6);
+    ellipse(520,150,8,8);
+    ellipse(468,300,9,9);
+    ellipse(70,309,9,9);
+    ellipse(130,40,10,10);
+    ellipse(170,170,9,9);       
     }
   }
   
@@ -108,8 +126,49 @@ else if(sceneNum===1){
   noStroke();
   background(10, 30, 103);
   
-drawstar();
-     drawgroud();
+  fill(255, 255, 255);//stars
+    ellipse(200,200,10,10);
+    ellipse(300,100,6,6);
+    ellipse(100,100,7,7);
+    ellipse(200,300,10,10);
+    ellipse(150,78,8,8);
+    ellipse(400,155,9,9);
+    ellipse(10,210,7,7);
+    ellipse(489,327,9,9);
+    ellipse(360,323,10,10);
+    ellipse(378,46,5,5);
+    ellipse(23,70,8,8);
+    ellipse(90,280,5,5);
+    ellipse(120,230,7,7);
+    ellipse(400,270,9,9);
+    ellipse(370,100,9,9);
+    ellipse(500,200,9,9);
+    ellipse(600,209,10,10);
+    ellipse(570,20,7,7);
+    ellipse(550,200,6,6);
+    ellipse(520,150,8,8);
+    ellipse(468,300,9,9);
+    ellipse(70,309,9,9);
+    ellipse(130,40,10,10);
+    ellipse(170,170,9,9);
+    ellipse(80,150,8,8);
+    ellipse(50,260,9,9);
+    ellipse(260,230,9,9);
+    ellipse(270,170,8,8);
+    ellipse(60,350,52,25);//end of stars
+  
+  fill(177, 140, 15);//ground
+    rect(0,315,1000,50);
+    fill(149, 120, 15);
+    ellipse(450,329,30,15);
+    ellipse(270,330,41,21); 
+    ellipse(70,329,40,20);
+    ellipse(400,340,51,21); 
+    ellipse(170,339,60,30);
+    ellipse(270,330,41,21); 
+    ellipse(530,345,50,30);
+    ellipse(600,340,45,25);
+    ellipse(30,350,52,25);//end of ground
   translate(-person.pos.x,0);
   
   
@@ -154,12 +213,50 @@ drawstar();
   
   //end screen-> lose
   background(10, 30, 103);
- noStroke();
-   
-   drawstar();
-   drawgroud();
+  noStroke();
+  fill(255, 255, 255);
+    ellipse(200,200,10,10);
+    ellipse(300,100,6,6);
+    ellipse(100,100,7,7);
+    ellipse(200,300,10,10);
+    ellipse(150,78,8,8);
+    ellipse(400,155,9,9);
+    ellipse(10,210,7,7);
+    ellipse(489,327,9,9);
+    ellipse(360,323,10,10);
+    ellipse(378,46,5,5);
+    ellipse(23,70,8,8);
+    ellipse(90,280,5,5);
+    ellipse(120,230,7,7);
+    ellipse(400,270,9,9);
+    ellipse(370,100,9,9);
+    ellipse(500,200,9,9);
+    ellipse(600,209,10,10);
+    ellipse(570,20,7,7);
+    ellipse(550,200,6,6);
+    ellipse(520,150,8,8);
+    ellipse(468,300,9,9);
+    ellipse(70,309,9,9);
+    ellipse(130,40,10,10);
+    ellipse(170,170,9,9);
+    ellipse(80,150,8,8);
+    ellipse(50,260,9,9);
+    ellipse(260,230,9,9);
+    ellipse(270,170,8,8);
+    fill(177, 140, 15);
     
-	fill(255,7,92);
+  rect(0,315,1000,50);
+    fill(149, 120, 15);
+    ellipse(450,329,30,15);
+    ellipse(270,330,41,21); 
+    ellipse(70,329,40,20);
+    ellipse(400,340,51,21); 
+    ellipse(170,339,60,30);
+    ellipse(270,330,41,21); 
+    ellipse(530,345,50,30);
+    ellipse(600,340,45,25);
+    ellipse(30,350,52,25);
+     fill(255,7,92);
     text("YOU LOSE!",250,200);
 	}
 }  
