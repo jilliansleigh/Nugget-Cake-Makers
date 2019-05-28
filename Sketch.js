@@ -275,39 +275,11 @@ var monster = function (x) {
   ellipse(418+x,315,5,13);
   ellipse(427+x,315,5,13);
 };
-var stars = function (xOfStar) {
-var xOfStar = 15
-  var drawstar = function draw(){
+var drawstar = function draw(){
      fill(255,255,255);
-    ellipse(xOfStar+200,200,10,10);
-    ellipse(xOfStar+300,100,6,6);
-    ellipse(xOfStar+100,100,7,7);
-    ellipse(xOfStar+200,300,10,10);
-    ellipse(xOfStar+150,78,8,8);
-    ellipse(xOfStar+400,155,9,9);
-    ellipse(xOfStar+10,210,7,7);
-    ellipse(xOfStar+489,327,9,9);
-    ellipse(xOfStar+360,323,10,10);
-    ellipse(xOfStar+378,46,5,5);
-    ellipse(xOfStar+23,70,8,8);
-    ellipse(xOfStar+90,280,5,5);
-    ellipse(xOfStar+120,230,7,7);
-    ellipse(xOfStar+400,270,9,9);
-    ellipse(xOfStar+370,100,9,9);
-    ellipse(xOfStar+500,200,9,9);
-    ellipse(xOfStar+600,209,10,10); 
-    ellipse(xOfStar+570,20,7,7);
-    ellipse(xOfStar+550,200,6,6);
-    ellipse(xOfStar+520,150,8,8);
-    ellipse(xOfStar+468,300,9,9);
-    ellipse(xOfStar+70,309,9,9);
-    ellipse(xOfStar+130,40,10,10);
-    ellipse(xOfStar+170,170,9,9);
+    ellipse(random(100,490),random(100,500),200,10,10);
     
-    xOfStar = xOfStar-1
-
-};
-
+}
 
 var drawground = function draw(){
   
@@ -323,11 +295,14 @@ var drawground = function draw(){
     ellipse(530,345,50,30);
     ellipse(600,340,45,25);
     ellipse(30,350,52,25);//end of ground
-};
+}
+
 
 function setup() {
   createCanvas(640, 360);
   person = new Person();
+
+  //floating monster dudes 
   for(var i = 0; i<10000;i++){
     monster[i]=new Monster(i*50,300*random(0,1.9));
   }
@@ -349,15 +324,16 @@ function draw() {
     background(10, 30, 103);
     textSize(20);
     noStroke();
+    
+  
+    drawground();
+    
     fill(0,255,127);
     text("THE EQUINOX DELIVERY",100,100);
     fill(255,20,147);
     text("PRESS B TO BEGIN",200,200);
     text("USE THE SPACE BAR TO JUMP",250,250);
      fill(70,130,180);
-  	
-      drawstar();
-      drawground();
     
     fill(50);
     rect(589,335,50,25);
@@ -368,7 +344,7 @@ function draw() {
       background(10, 30, 103);
         fill(255,20,147);
       text("Nugget Cake Makers",190,100);
-         drawstar();
+
       
     }
   }
@@ -379,9 +355,10 @@ else if(sceneNum===1){
   noStroke();
   background(10, 30, 103);
   
-    drawstar();
-      drawground();
-    
+  
+  drawstar();
+ drawground();
+
   translate(-person.pos.x,0);
   
   
@@ -397,40 +374,28 @@ else if(sceneNum===1){
   //translate(-person.pos.x,0);
     person.update();
   person.edges();
-  for(var i = 0; i<10;i++){
+  for(var i = 0; i<100;i++){
     monster[i].show();
   }
-  for(var i = 0; i<10;i++){
-    stars[i].show();
+  
+  
   
   //monster
  
   person.display();
   fill(153,50,204);
-  // monster(100);
-  // monster(500);
-  // monster(1000);
-  // monster(1500);
-  // monster(2000);
-  // monster(2500);
-  // monster(3000); 
-  // monster(3500);
-  // monster(4000);
-  // monster(4500);
-  
-  
-  
-  
-  
+
 }else{
   
   //end screen-> lose
   background(10, 30, 103);
   noStroke();
+ 
   drawstar();
-      drawground();
-    
+  drawground();
+  
      fill(255,7,92);
     text("YOU LOSE!",250,200);
 	}
 }  
+ 
