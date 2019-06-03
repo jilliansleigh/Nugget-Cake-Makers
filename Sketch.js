@@ -426,6 +426,8 @@ function draw() {
        ellipse(325,120,140,20);
     fill(255,225,240);
        ellipse(325,112,105,20);
+      fill(131, 249, 0);
+      text("Nugget Cake Makers",230,50);
 
       
     }
@@ -471,7 +473,7 @@ else if(sceneNum===1){
    
 
 
-}else{
+}else if (sceneNum===2){
   
   //end screen-> lose
   background(10, 30, 103);
@@ -483,5 +485,23 @@ else if(sceneNum===1){
      fill(255,7,92); 
     text("YOU LOSE!",250,200);
 	}
+  
+  else if (sceneNum===3){
+  
+  //end screen-> lose
+  background(10, 30, 103);
+  noStroke();
+ 
+  drawstar();
+  drawground();
+  
+     fill(255,7,92); 
+    text("YOU WIN!",250,200);
+	}
+
+  
+  
+
 }  
+
  
