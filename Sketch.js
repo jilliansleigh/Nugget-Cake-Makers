@@ -276,9 +276,31 @@ var monster = function (x) {
   ellipse(427+x,315,5,13);
 };
 var drawstar = function draw(){
-     fill(255,255,255);
-    ellipse(random(100,490),random(100,500),200,10,10);
-    
+  fill(255,255,255);
+    ellipse(200,200,10,10);
+    ellipse(300,100,6,6);
+    ellipse(100,100,7,7);
+    ellipse(200,300,10,10);
+    ellipse(150,78,8,8);
+    ellipse(400,155,9,9);
+    ellipse(10,210,7,7);
+    ellipse(489,327,9,9);
+    ellipse(360,323,10,10);
+    ellipse(378,46,5,5);
+    ellipse(23,70,8,8);
+    ellipse(90,280,5,5);
+    ellipse(120,230,7,7);
+    ellipse(400,270,9,9);
+    ellipse(370,100,9,9);
+    ellipse(500,200,9,9);
+    ellipse(600,209,10,10); 
+    ellipse(570,20,7,7);
+    ellipse(550,200,6,6);
+    ellipse(520,150,8,8);
+    ellipse(468,300,9,9);
+    ellipse(70,309,9,9);
+    ellipse(130,40,10,10);
+    ellipse(170,170,9,9);
 }
 
 var drawground = function draw(){
@@ -314,10 +336,44 @@ function keyPressed(){
   if (key == ' '){
     var jump = createVector(0,-5);
   person.applyForce(jump);
+
   }else if (key=='b'){ 
     sceneNum++;
   }
 }
+
+
+
+
+function collision() {
+  
+  
+  
+  text("---DEBUG---",100,100);
+  
+ 
+  //floating monster dudes 
+  for(var i = 0; i<10000;i++){
+    //monster[i]=new Monster(i*50,300*random(0,1.9)); 
+  
+  
+    if ((person.pos.x >= monster[i].x && person.pos.x <= (monster[i].x + 40)) &&
+        (person.pos.y >= monster[i].y && person.pos.y <= (monster[i].y + 40))) {
+      
+       text("   COLLISION !!!",100,100);
+        //monster[i].pos.y = -400;
+     //   this.monster++;
+      
+      //  var jump = createVector(0,-5);
+      //  person.applyForce(jump);     
+      
+    }
+   
+  }
+}
+
+
+
 //start screen
 function draw() {
   if(sceneNum===0){ 
@@ -325,7 +381,7 @@ function draw() {
     textSize(20);
     noStroke();
     
-  
+    drawstar();
     drawground();
     
     fill(0,255,127);
@@ -343,7 +399,33 @@ function draw() {
     if(mouseIsPressed&&mouseX>589&&mouseY>335){
       background(10, 30, 103);
         fill(255,20,147);
-      text("Nugget Cake Makers",190,100);
+
+ 
+      fill(87, 103, 210);
+  triangle(469,219,330,360,159,221);
+      triangle(422,365,261,364,158,221);
+ triangle(422,365,261,364,492,220);
+      fill(213, 143, 56);
+  ellipse(327,230,340,120);
+      
+     fill(197, 122, 56);
+      ellipse(300,245,30,30);
+      ellipse(350,215,25,25);
+      ellipse(390,265,20,20);
+      ellipse(280,185,15,15);
+      ellipse(220,210,20,20);
+      ellipse(440,225,25,25);
+      ellipse(200,250,18,18);
+    fill(255,165,210);
+     ellipse(325,180,260,100);
+    fill(255,180,217);
+     ellipse(325,150,210,60);
+    fill(255,195,225);
+     ellipse(325,130,170,30);
+    fill(255,210,232);
+       ellipse(325,120,140,20);
+    fill(255,225,240);
+       ellipse(325,112,105,20);
 
       
     }
@@ -376,6 +458,7 @@ else if(sceneNum===1){
   person.edges();
   for(var i = 0; i<100;i++){
     monster[i].show();
+    collision();
   }
   
   
@@ -384,6 +467,9 @@ else if(sceneNum===1){
  
   person.display();
   fill(153,50,204);
+
+   
+
 
 }else{
   
@@ -394,7 +480,7 @@ else if(sceneNum===1){
   drawstar();
   drawground();
   
-     fill(255,7,92);
+     fill(255,7,92); 
     text("YOU LOSE!",250,200);
 	}
 }  
