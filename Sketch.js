@@ -486,22 +486,47 @@ else if(sceneNum===1){
     text("YOU LOSE!",250,200);
 	}
   
-  else if (sceneNum===3){
+   else if (sceneNum===3){
   
-  //end screen-> lose
-  background(10, 30, 103);
+  //end screen-> win
+  background(202, 250, 238);
   noStroke();
- 
-  drawstar();
-  drawground();
-  
-     fill(255,7,92); 
-    text("YOU WIN!",250,200);
+    
+    //monster
+   
+    
+    fill(216, 112, 162,120);
+  rect(220,220,70,70,7);
+    ellipse(215,250,17,17);
+    ellipse(295,250,17,17);
+    
+    
+  fill(0,0,0);
+  ellipse(270,240,17,17);
+  ellipse(240,240,17,17);
+  ellipse(255,265,13,13);
+    
+    fill(232, 16, 171);
+    ellipse(20,30,300,300);
+    fill(194, 116, 63);
+    ellipse(600,350,300,300);
+  fill(101, 0, 235);
+    ellipse(200,300,30,30);
+    ellipse(150,150,40,40);
+    ellipse(350,100,30,30);
+    ellipse(450,250,40,40);
+   
+     fill(82, 115, 127);
+    rect(242,210,25,9);
+     triangle(258,210,267,210,261,196);
+     triangle(248,210,259,210,253,196);
+     triangle(242,210,252,210,245,196);
+     fill(0,0,0); 
+    text("YOU WIN!",300,200);
 	}
 
   
   
 
 }  
-
  
