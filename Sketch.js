@@ -465,28 +465,69 @@ else if(sceneNum===1){
   
   
   
+  
   //monster
  
   person.display();
   fill(153,50,204);
-
-   
-
 
 }else if (sceneNum===2){
   
   //end screen-> lose
   background(10, 30, 103);
   noStroke();
- 
-  drawstar();
-  drawground();
+ //monster dude
+  fill(225, 244, 102,120);
+  rect(220,220,70,70,7);
+    
+    ellipse(215,250,17,17);
+    ellipse(295,250,17,17);
+    
+    
+  fill(0,0,0);
+  ellipse(270,240,17,17);
+  ellipse(240,240,17,17);
+  ellipse(255,265,13,13);
+    
+    fill(200, 16, 171);
+    ellipse(20,30,300,300);
+    
+  //balls in the background
+  rect(600,200,200,200,20);
+  fill(255, 255, 102);
+    ellipse(610,185,50,50);  fill(255,200,90);
+    ellipse(570,185,50,50);
+    fill(255,200,90);
+    ellipse(600,350,300,300);
+   fill(255, 255, 102);
+  ellipse(545,205,50,50);
+   fill(255, 255, 102);
+  ellipse(500,210,50,50);
+  fill(255,200,90);
+    ellipse(450,300,50,50);
+   ellipse(475,250,50,50);
+     ellipse(450,200,50,50);
+  ellipse(500,180,50,50);
+   ellipse(600,150,50,50);
+  fill(255,255,90);
+  ellipse(400,300,50,50);
+  fill(9,200,50);
+    rect(600,200,200,200,20);
+  fill(82, 115, 127);
+    rect(150,50,25,9);
+     triangle(258,210,267,210,261,196);
+     triangle(248,210,259,210,253,196);
+     triangle(242,210,252,210,245,196);
+     fill(0,0,0); 
+     fill(255,107,92); 
   
-     fill(255,7,92); 
-    text("YOU LOSE!",250,200);
+    text("YOU LOSE!",300,200);
 	}
   
-   else if (sceneNum===3){
+  
+  
+  
+  else if (sceneNum===3){
   
   //end screen-> win
   background(202, 250, 238);
@@ -499,17 +540,18 @@ else if(sceneNum===1){
   rect(220,220,70,70,7);
     ellipse(215,250,17,17);
     ellipse(295,250,17,17);
+   
     
     
   fill(0,0,0);
   ellipse(270,240,17,17);
   ellipse(240,240,17,17);
   ellipse(255,265,13,13);
-    
+  ellipse(200,300,13,13);
     fill(232, 16, 171);
     ellipse(20,30,300,300);
     fill(194, 116, 63);
-    ellipse(600,350,300,300);
+    ellipse(600,350,30,30);
   fill(101, 0, 235);
     ellipse(200,300,30,30);
     ellipse(150,150,40,40);
@@ -529,4 +571,3 @@ else if(sceneNum===1){
   
 
 }  
- 
