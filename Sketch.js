@@ -1,270 +1,17 @@
 var person;
 var monster = [];
 var sceneNum=0
-var monster = function (x) {
-  fill(200,109,20);  
-  rect(400+x,280,45,45);
-  fill(139,69,19);
-  ellipse(415+x,300,8,8);
-  ellipse(430+x,300,8,8);
-  fill(129,69,19)
-  ellipse(418+x,315,5,13);
-  ellipse(427+x,315,5,13);
-};
 
 
-function setup() {
-  createCanvas(640, 360);
-  person = new Person();
-  for(var i = 0; i<10000;i++){
-    monster[i]=new Monster(i*50,300*random(0,1.9));
-  }
-      
-}
+var collision_ask_question=1; // mainly for debug: keep running scene or not
+var debug=0;
+
+var val1;
+var val2;
+var operator;
+var correct_answer;
 
 
-function keyPressed(){
-  if (key == ' '){
-    var jump = createVector(0,-5);
-  person.applyForce(jump);
-  }else if (key=='b'){ 
-    sceneNum++;
-  }
-}
-//start screen
-function draw() {
-  if(sceneNum===0){ 
-    background(10, 30, 103);
-    textSize(20);
-    noStroke();
-    fill(0,255,127);
-    text("THE EQUINOX DELIVERY",100,100);
-    fill(255,20,147);
-    text("PRESS B TO BEGIN",200,200);
-    text("USE THE SPACE BAR TO JUMP",250,250);
-     fill(70,130,180);
-  	
-        fill(255,255,255);
-    ellipse(200,200,10,10);
-    ellipse(300,100,6,6);
-    ellipse(100,100,7,7);
-    ellipse(200,300,10,10);
-    ellipse(150,78,8,8);
-    ellipse(400,155,9,9);
-    ellipse(10,210,7,7);
-    ellipse(489,327,9,9);
-    ellipse(360,323,10,10);
-    ellipse(378,46,5,5);
-    ellipse(23,70,8,8);
-    ellipse(90,280,5,5);
-    ellipse(120,230,7,7);
-    ellipse(400,270,9,9);
-    ellipse(370,100,9,9);
-    ellipse(500,200,9,9);
-    ellipse(600,209,10,10); 
-    ellipse(570,20,7,7);
-    ellipse(550,200,6,6);
-    ellipse(520,150,8,8);
-    ellipse(468,300,9,9);
-    ellipse(70,309,9,9);
-    ellipse(130,40,10,10);
-    ellipse(170,170,9,9); 
-    
-    fill(177, 140, 15);//ground
-    rect(0,315,1000,50);
-    fill(149, 120, 15);
-    ellipse(450,329,30,15);
-    ellipse(270,330,41,21); 
-    ellipse(70,329,40,20);
-    ellipse(400,340,51,21); 
-    ellipse(170,339,60,30);
-    ellipse(270,330,41,21); 
-    ellipse(530,345,50,30);
-    ellipse(600,340,45,25);
-    ellipse(30,350,52,25);
-    
-    fill(50);
-    rect(589,335,50,25);
-     fill(30,0,170);
-    text("Logo", 593,355);
-   fill(80,90,90); 
-    if(mouseIsPressed&&mouseX>589&&mouseY>335){
-      background(10, 30, 103);
-        fill(255,20,147);
-      text("Nugget Cake Makers",190,100);
-        fill(255,255,255);
-    ellipse(200,200,10,10);
-    ellipse(300,100,6,6);
-    ellipse(100,100,7,7);
-    ellipse(200,300,10,10);
-    ellipse(150,78,8,8);
-    ellipse(400,155,9,9);
-    ellipse(10,210,7,7);
-    ellipse(489,327,9,9);
-    ellipse(360,323,10,10);
-    ellipse(378,46,5,5);
-    ellipse(23,70,8,8);
-    ellipse(90,280,5,5);
-    ellipse(120,230,7,7);
-    ellipse(400,270,9,9);
-    ellipse(370,100,9,9);
-    ellipse(500,200,9,9);
-    ellipse(600,209,10,10); 
-    ellipse(570,20,7,7);
-    ellipse(550,200,6,6);
-    ellipse(520,150,8,8);
-    ellipse(468,300,9,9);
-    ellipse(70,309,9,9);
-    ellipse(130,40,10,10);
-    ellipse(170,170,9,9);       
-    }
-  }
-  
-  //during the game screen
-                         
-else if(sceneNum===1){
-  noStroke();
-  background(10, 30, 103);
-  
-  fill(255, 255, 255);//stars
-    ellipse(200,200,10,10);
-    ellipse(300,100,6,6);
-    ellipse(100,100,7,7);
-    ellipse(200,300,10,10);
-    ellipse(150,78,8,8);
-    ellipse(400,155,9,9);
-    ellipse(10,210,7,7);
-    ellipse(489,327,9,9);
-    ellipse(360,323,10,10);
-    ellipse(378,46,5,5);
-    ellipse(23,70,8,8);
-    ellipse(90,280,5,5);
-    ellipse(120,230,7,7);
-    ellipse(400,270,9,9);
-    ellipse(370,100,9,9);
-    ellipse(500,200,9,9);
-    ellipse(600,209,10,10);
-    ellipse(570,20,7,7);
-    ellipse(550,200,6,6);
-    ellipse(520,150,8,8);
-    ellipse(468,300,9,9);
-    ellipse(70,309,9,9);
-    ellipse(130,40,10,10);
-    ellipse(170,170,9,9);
-    ellipse(80,150,8,8);
-    ellipse(50,260,9,9);
-    ellipse(260,230,9,9);
-    ellipse(270,170,8,8);
-    ellipse(60,350,52,25);//end of stars
-  
-  fill(177, 140, 15);//ground
-    rect(0,315,1000,50);
-    fill(149, 120, 15);
-    ellipse(450,329,30,15);
-    ellipse(270,330,41,21); 
-    ellipse(70,329,40,20);
-    ellipse(400,340,51,21); 
-    ellipse(170,339,60,30);
-    ellipse(270,330,41,21); 
-    ellipse(530,345,50,30);
-    ellipse(600,340,45,25);
-    ellipse(30,350,52,25);//end of ground
-  translate(-person.pos.x,0);
-  
-  
-  
-  //gravity
-  var gravity = createVector(0,0.11);
-  person.applyForce(gravity);
-  if(mouseIsPressed){
-  
-  var force = createVector(-0.000000000001,0);
-  person.applyForce(force);
-  }
-  //translate(-person.pos.x,0);
-    person.update();
-  person.edges();
-  for(var i = 0; i<100;i++){
-    monster[i].show();
-  }
- 
-  
-  
-  //monster
- 
-  person.display();
-  fill(153,50,204);
-  // monster(100);
-  // monster(500);
-  // monster(1000);
-  // monster(1500);
-  // monster(2000);
-  // monster(2500);
-  // monster(3000); 
-  // monster(3500);
-  // monster(4000);
-  // monster(4500);
-  
-  
-  
-  
-  
-}else{
-  
-  //end screen-> lose
-  background(10, 30, 103);
-  noStroke();
-  fill(255, 255, 255);
-    ellipse(200,200,10,10);
-    ellipse(300,100,6,6);
-    ellipse(100,100,7,7);
-    ellipse(200,300,10,10);
-    ellipse(150,78,8,8);
-    ellipse(400,155,9,9);
-    ellipse(10,210,7,7);
-    ellipse(489,327,9,9);
-    ellipse(360,323,10,10);
-    ellipse(378,46,5,5);
-    ellipse(23,70,8,8);
-    ellipse(90,280,5,5);
-    ellipse(120,230,7,7);
-    ellipse(400,270,9,9);
-    ellipse(370,100,9,9);
-    ellipse(500,200,9,9);
-    ellipse(600,209,10,10);
-    ellipse(570,20,7,7);
-    ellipse(550,200,6,6);
-    ellipse(520,150,8,8);
-    ellipse(468,300,9,9);
-    ellipse(70,309,9,9);
-    ellipse(130,40,10,10);
-    ellipse(170,170,9,9);
-    ellipse(80,150,8,8);
-    ellipse(50,260,9,9);
-    ellipse(260,230,9,9);
-    ellipse(270,170,8,8);
-    fill(177, 140, 15);
-    
-  rect(0,315,1000,50);
-    fill(149, 120, 15);
-    ellipse(450,329,30,15);
-    ellipse(270,330,41,21); 
-    ellipse(70,329,40,20);
-    ellipse(400,340,51,21); 
-    ellipse(170,339,60,30);
-    ellipse(270,330,41,21); 
-    ellipse(530,345,50,30);
-    ellipse(600,340,45,25);
-    ellipse(30,350,52,25);
-     fill(255,7,92);
-    text("YOU LOSE!",250,200);
-	}
-} 
-
-//work in progress
-var person;
-var monster = [];
-var sceneNum=0
 var monster = function (x) {
   fill(200,109,20);  
   rect(400+x,280,45,45);
@@ -326,7 +73,7 @@ function setup() {
 
   //floating monster dudes 
   for(var i = 0; i<10000;i++){
-    monster[i]=new Monster(i*50,300*random(0,1.9));
+   monster[i]=new Monster(i*50,300*random(0,1.9));
   }
       
 }
@@ -345,32 +92,47 @@ function keyPressed(){
 
 
 
+function mathquestion() {
+  val1 = Math.trunc(Math.random() * 10) + 11; // val1 always > 2*val2 so no negative answers
+  val2 = Math.trunc(Math.random() * 10);
+  operator = ["+", "-"][Math.trunc(Math.random()*2)];
+
+  correct_answer = eval(val1 + operator + val2);
+  
+  return prompt("How much is " + val1 + " " + operator + " " + val2 + "?") == eval( val1 + operator + val2);
+  
+}
+
+
+
 function collision() {
-  
-  
-  
-  text("---DEBUG---",100,100);
-  
- 
-  //floating monster dudes 
-  for(var i = 0; i<10000;i++){
-    //monster[i]=new Monster(i*50,300*random(0,1.9)); 
-  
-  
-    if ((person.pos.x >= monster[i].x && person.pos.x <= (monster[i].x + 40)) &&
-        (person.pos.y >= monster[i].y && person.pos.y <= (monster[i].y + 40))) {
+  for(var i = 0; i<100;i++){
+
+    if( ( (person.xcoord()-monster[i].xcoord() <= 10) && (person.ycoord()-monster[i].ycoord() <= 25) ) &&
+        ( (person.xcoord()-monster[i].xcoord() >= -50) && (person.ycoord()-monster[i].ycoord() >= -25) ) &&
+        (monster[i].ycoord() > -43) ) {      
+    
+       if(collision_ask_question){
       
-       text("   COLLISION !!!",100,100);
-        //monster[i].pos.y = -400;
-     //   this.monster++;
-      
-      //  var jump = createVector(0,-5);
-      //  person.applyForce(jump);     
-      
+            if (mathquestion()) {
+              sceneNum=3;
+            }else{
+              sceneNum=2;
+            }
+         
+        }else{
+          text("     COLLISION !!! with monster #" + i,person.xcoord()+50,300);
+        }
     }
-   
+    
+    if(debug) {
+        text(" x-delta=" + (person.xcoord()-monster[i].xcoord()),monster[i].xcoord(),monster[i].ycoord()+40);
+        text(" y-delta=" + (person.ycoord()-monster[i].ycoord()),monster[i].xcoord(),monster[i].ycoord()+60);
+    } 
   }
 }
+
+
 
 
 
@@ -392,7 +154,7 @@ function draw() {
      fill(70,130,180);
     
     fill(50);
-    rect(589,335,50,25);
+    rect(589,335,51,25);
      fill(30,0,170);
     text("Logo", 593,355);
    fill(80,90,90); 
@@ -460,7 +222,17 @@ else if(sceneNum===1){
   person.edges();
   for(var i = 0; i<100;i++){
     monster[i].show();
-    collision();
+    
+      if(debug) {
+        text(" x=" + monster[i].xcoord(),monster[i].xcoord(),monster[i].ycoord()+80);
+        text(" y=" + monster[i].ycoord(),monster[i].xcoord(),monster[i].ycoord()+100); 
+        text(" -",monster[i].xcoord()-10,monster[i].ycoord()+120);
+        text(" #" + i,monster[i].xcoord(),monster[i].ycoord()+120);
+        text(" -",monster[i].xcoord()+35,monster[i].ycoord()+120);
+     }       
+      
+            
+    
   }
   
   
@@ -470,13 +242,19 @@ else if(sceneNum===1){
   person.display();
   fill(153,50,204);
 
+  collision();
+  
+  if(debug) {
+   text(" x=" + person.xcoord(),person.xcoord(),250);
+   text(" y=" + person.ycoord(),person.xcoord(),270); 
+  }
    
 
 
 }else if (sceneNum===2){
   
   //end screen-> lose
-  background(10, 30, 103);
+  background(203, 240, 251);
   noStroke();
  //monster dude
   fill(225, 244, 102,120);
@@ -485,7 +263,21 @@ else if(sceneNum===1){
     ellipse(215,250,17,17);
     ellipse(295,250,17,17);
     
-    
+  fill(113, 32, 251);
+  text("X",100,320);
+  text("x",230,310);
+  text("X",180,330);
+  text("X",330,300);
+  text("X",350,250);
+  text("X",200,60);
+  text("X",250,100);
+  text("X",400,70);
+  text("X",470,120);
+  text("x",295,210);
+  text("x",310,230);
+  text("x",400,230);
+  text("x",340,220);
+  
   fill(0,0,0);
   ellipse(270,240,17,17);
   ellipse(240,240,17,17);
@@ -495,9 +287,9 @@ else if(sceneNum===1){
     ellipse(20,30,300,300);
     
   //balls in the background
-  rect(600,200,200,200,20);
   fill(255, 255, 102);
-    ellipse(610,185,50,50);  fill(255,200,90);
+    ellipse(610,185,50,50); 
+  fill(255,200,90);
     ellipse(570,185,50,50);
     fill(255,200,90);
     ellipse(600,350,300,300);
@@ -513,17 +305,16 @@ else if(sceneNum===1){
    ellipse(600,150,50,50);
   fill(255,255,90);
   ellipse(400,300,50,50);
-  fill(9,200,50);
-    rect(600,200,200,200,20);
-  fill(82, 115, 127);
-    rect(150,50,25,9);
-     triangle(258,210,267,210,261,196);
-     triangle(248,210,259,210,253,196);
-     triangle(242,210,252,210,245,196);
+  fill(255, 149, 0);
+  rect(235,208,18,15,2);
+  rect(260,208,18,15,2);
+  fill(255,255,255);
+  rect(251,213,10,7);
+     
      fill(0,0,0); 
-     fill(255,107,92); 
   
     text("YOU LOSE!",300,200);
+    text("correct answer: " + val1 + " " + operator + " " + val2 + " = " + correct_answer,300,240);
 	}
   
   
@@ -537,7 +328,7 @@ else if(sceneNum===1){
     //monster
    
     
-    fill(216, 112, 162,120);
+    fill(216, 112, 162);
   rect(220,220,70,70,7);
     ellipse(215,250,17,17);
     ellipse(295,250,17,17);
@@ -598,4 +389,3 @@ else if(sceneNum===1){
   
 
 }  
-
