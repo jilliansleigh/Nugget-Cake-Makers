@@ -1,53 +1,7 @@
 Things to do:
-1. Use the coding challenge from a few weeks prior as a base outline --> change it to fit the colour sceem and sprits watned (waiting on sprits at moment)
-2. Change the program so that if the enemy touches the player, a math releated question appears ***WIP***
-3. Make stars move
-4. Add logo (Waiting on group design at moment)
-5. Animate the sprits to move **WIP***
-6. Add the money factor--> answer question incorrectly= lose money 
-  
-  
-  stars and ground:
-  var drawstar = function draw(){
-     fill(255,255,255);
-    ellipse(200,200,10,10);
-    ellipse(300,100,6,6);
-    ellipse(100,100,7,7);
-    ellipse(200,300,10,10);
-    ellipse(150,78,8,8);
-    ellipse(400,155,9,9);
-    ellipse(10,210,7,7);
-    ellipse(489,327,9,9);
-    ellipse(360,323,10,10);
-    ellipse(378,46,5,5);
-    ellipse(23,70,8,8);
-    ellipse(90,280,5,5);
-    ellipse(120,230,7,7);
-    ellipse(400,270,9,9);
-    ellipse(370,100,9,9);
-    ellipse(500,200,9,9);
-    ellipse(600,209,10,10); 
-    ellipse(570,20,7,7);
-    ellipse(550,200,6,6);
-    ellipse(520,150,8,8);
-    ellipse(468,300,9,9);
-    ellipse(70,309,9,9);
-    ellipse(130,40,10,10);
-    ellipse(170,170,9,9); 
-}
+1. Use the coding challenge from a few weeks prior as a base outline --> change it to fit the colour sceem and sprits watned *COMPLETE*
+2. Change the program so that if the enemy touches the player, a math releated question appears *COMPLETE*
+3. Add logo *COMPLETE*
+4. Animate the sprits to move *COMPLETE*
 
-var drawground = function draw(){
   
-  fill(177, 140, 15);//ground
-    rect(0,315,1000,50);
-    fill(149, 120, 15);
-    ellipse(450,329,30,15);
-    ellipse(270,330,41,21); 
-    ellipse(70,329,40,20);
-    ellipse(400,340,51,21); 
-    ellipse(170,339,60,30);
-    ellipse(270,330,41,21); 
-    ellipse(530,345,50,30);
-    ellipse(600,340,45,25);
-    ellipse(30,350,52,25);//end of ground
-}
