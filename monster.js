@@ -22,4 +22,16 @@ function Monster(x,y) {
   ellipse(423+this.x,277-this.y, 47,10);
    
   }
+  
+  
+  
+  this.xcoord=function(){
+    return Math.trunc(400+this.x)
+  }
+  
+  this.ycoord=function(){
+    return Math.trunc(280-this.y)
+  }
+  
 }
+
