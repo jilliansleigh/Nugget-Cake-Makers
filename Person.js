@@ -1,4 +1,7 @@
-function Person() {
+function Person(x,y) {
+  this.x=x;
+  this.y=y;
+  
   this.pos = createVector(50, 250);
   this.vel = createVector(1, 0);
   this.acc = createVector(0, 0);
@@ -51,7 +54,23 @@ function Person() {
       
       
     }
+ 
+
+  
+  this.xcoord=function(){
+    return Math.trunc(this.pos.x)
+  }
+  
+  this.ycoord=function(){
+    return Math.trunc(this.pos.y)
+  }
+  
+  
+  
   }
 }
+
+
+
 
 
