@@ -244,6 +244,11 @@ else if(sceneNum===1){
 
   collision();
   
+  //you made it past all the monsters
+  if(person.xcoord() > 5500){
+    sceneNum=3;
+  }
+  
   if(debug) {
    text(" x=" + person.xcoord(),person.xcoord(),250);
    text(" y=" + person.ycoord(),person.xcoord(),270); 
